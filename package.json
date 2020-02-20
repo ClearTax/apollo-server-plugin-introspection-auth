@@ -11,6 +11,8 @@
     "build": "npm run build:es && npm run build:cjs",
     "build:es": "tsc --build tsconfig.es.json",
     "build:cjs": "tsc --build tsconfig.cjs.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "prepublishOnly": "npm-audit-ok && npm run build && package-ok"
   },
   "author": "ClearTax Engineering",
