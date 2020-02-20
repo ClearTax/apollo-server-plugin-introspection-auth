@@ -6,7 +6,7 @@
   "module": "dist/es/index.js",
   "sideEffects": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "prebuild": "rm -rf dist",
     "build": "npm run build:es && npm run build:cjs",
     "build:es": "tsc --build tsconfig.es.json",
