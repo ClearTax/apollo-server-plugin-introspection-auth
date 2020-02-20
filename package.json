@@ -13,7 +13,7 @@
     "build:cjs": "tsc --build tsconfig.cjs.json",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm-audit-ok && npm run build && package-ok"
   },
   "author": "ClearTax Engineering",
   "maintainers": [
@@ -31,6 +31,7 @@
     "@types/jest": "^25.1.2",
     "@types/node": "^13.7.1",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "apollo-server": "^2.10.1",
     "eslint": "^6.8.0",
     "eslint-plugin-eslint-comments": "^3.1.2",
     "eslint-plugin-import": "^2.20.1",
@@ -44,9 +45,9 @@
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^2.4.0",
     "jest": "^25.1.0",
+    "prepublish-ok": "^0.5.0",
     "prettier": "^1.19.1",
-    "typescript": "^3.7.5",
-    "apollo-server": "^2.10.1"
+    "typescript": "^3.7.5"
   },
   "peerDependencies": {
     "apollo-server": ">= 2.10.1"
