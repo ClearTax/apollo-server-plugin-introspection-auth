@@ -10,5 +10,5 @@ export const isIntrospectionRequest = (request: GraphQLRequestContext<any>['requ
   if (typeof request.query === 'string') {
     return REGEX_INTROSPECTION_QUERY.test(request.query);
   }
-  return false;
+  return typeof request.query === 'string' && REGEX_INTROSPECTION_QUERY.test(request.query)
 };
