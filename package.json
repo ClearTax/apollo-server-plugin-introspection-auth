@@ -1,6 +1,6 @@
 {
   "name": "@cleartax/apollo-server-plugin-introspection-auth",
-  "version": "1.0.1-beta.1",
+  "version": "1.0.1",
   "description": "An Apollo Server plugin to allow introspection only via authenticated requests",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
