@@ -28,7 +28,7 @@
   "license": "MIT",
   "devDependencies": {
     "@cleartax/eslint-config": "^1.3.1",
-    "@types/jest": "^25.1.2",
+    "@types/jest": "^25.1.3",
     "@types/node": "^13.7.1",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "apollo-server": "^2.10.1",
@@ -47,6 +47,7 @@
     "jest": "^25.1.0",
     "prepublish-ok": "^0.5.0",
     "prettier": "^1.19.1",
+    "ts-jest": "^25.2.1",
     "typescript": "^3.7.5"
   },
   "peerDependencies": {

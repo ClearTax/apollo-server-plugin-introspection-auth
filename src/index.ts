@@ -3,6 +3,8 @@ import { ApolloServerPlugin, GraphQLRequestContext } from 'apollo-server-plugin-
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { ForbiddenError } from 'apollo-server';
 
+import { isIntrospectionRequest } from './utils';
+
 // allow for different types of authentication, currently support only token based
 type Options = {
   /** Type of authentication */
@@ -12,13 +14,6 @@ type Options = {
   /** Array of valid tokens */
   value: string[];
 };
-
-/**
- * Identify if the request is an introspection query type
- * @param request {GraphQLRequestContext['request]}
- */
-const isIntrospectionRequest = (request: GraphQLRequestContext<any>['request']) =>
-  request.query && (request.query.includes('__schema') || request.query.includes('__type'));
 
 /**
  * Validate a given token against a single or multiple valid values.
