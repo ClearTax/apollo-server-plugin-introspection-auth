@@ -41,7 +41,7 @@ const apolloServer = new ApolloServer({
 });
 ```
 
-**Note**: Ideally, you would want to add this configuration for non-development environments only.
+**Note**: Ideally, you would want to add this configuration for non-development environments only. In which case, you can add the options conditionally. The following example illustrates adding it for higher environments in `apollo-server-express`:-
 
 ```ts
 // this example uses `apollo-server-express`
@@ -53,7 +53,7 @@ let options: ApolloServerExpressConfig = {
   // your default apollo server express config
 };
 
-// ideally, add this configuration for NON-development environments
+// add this configuration for NON-development environments
 if (process.env.NODE_ENV === 'production') {
   options = {
     ...options,
@@ -72,3 +72,10 @@ if (process.env.NODE_ENV === 'production') {
 
 const apolloServer = new ApolloServer(options);
 ```
+
+## References
+
+Inspired from [this](https://github.com/apollographql/apollo-server/issues/1933#issuecomment-580510024) implementation in [apollographql/apollo-server#1933](https://github.com/apollographql/apollo-server/issues/1933).
+
+1. [Apollo GraphQL](https://www.apollographql.com/docs/)
+2. [Apollo Graph Manager](https://www.apollographql.com/docs/graph-manager/)
