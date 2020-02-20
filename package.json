@@ -6,14 +6,14 @@
   "module": "dist/es/index.js",
   "sideEffects": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "prebuild": "rm -rf dist",
-    "build": "npm run build:es && npm run build:cjs",
-    "build:es": "tsc --build tsconfig.es.json",
     "build:cjs": "tsc --build tsconfig.cjs.json",
-    "lint": "eslint .",
+    "build:es": "tsc --build tsconfig.es.json",
+    "build": "npm run build:es && npm run build:cjs",
     "lint:fix": "eslint --fix .",
-    "prepublishOnly": "npm-audit-ok && npm run build && package-ok"
+    "lint": "eslint .",
+    "prebuild": "rm -rf dist",
+    "prepublishOnly": "npm-audit-ok && npm run build && package-ok",
+    "test": "jest"
   },
   "author": "ClearTax Engineering",
   "maintainers": [
