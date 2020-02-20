@@ -17,7 +17,7 @@
     "url": "git+https://github.com/cleartax/apollo-server-plugin-introspection-auth.git"
   },
   "license": "MIT",
-  "author": "ClearTax Engineering",
+  "author": "ClearTax Engineering <opensource@cleartax.in>",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "sideEffects": false,
