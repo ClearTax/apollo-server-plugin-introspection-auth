@@ -17,8 +17,9 @@ Install the plugin as dependency.
 npm install -S @cleartax/apollo-server-plugin-introspection-auth
 ```
 
-`apollo-server` is a peer-dependency for this package
- If you haven't already, install it via:-
+`apollo-server` is a peer-dependency for this package.
+
+If you haven't already, install it via:-
 
 ```sh
 npx install-peerdeps @cleartax/apollo-server-plugin-introspection-auth
