@@ -68,7 +68,7 @@
     "typescript": "^3.7.5"
   },
   "peerDependencies": {
-    "apollo-server": ">= 2.10.1"
+    "apollo-server": ">= 2.14.3"
   },
   "dependencies": {
     "apollo-server-plugin-base": "^0.9.0"
