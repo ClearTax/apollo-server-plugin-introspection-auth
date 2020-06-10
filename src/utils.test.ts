@@ -1,3 +1,4 @@
+import type { GraphQLRequest } from 'apollo-server-plugin-base';
 import { isIntrospectionRequest } from './utils';
 
 describe('identifies introspection queries', () => {
@@ -5,7 +6,7 @@ describe('identifies introspection queries', () => {
     expect(
       isIntrospectionRequest({
         query: null,
-      } as any)
+      } as GraphQLRequest)
     ).toBe(false);
   });
   test.each<[string, string, boolean]>([
@@ -62,7 +63,7 @@ describe('identifies introspection queries', () => {
     expect(
       isIntrospectionRequest({
         query: input,
-      } as any)
+      } as GraphQLRequest)
     ).toBe(expected);
   });
 });
