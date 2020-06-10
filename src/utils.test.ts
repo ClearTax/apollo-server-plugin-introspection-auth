@@ -4,9 +4,7 @@ import { isIntrospectionRequest } from './utils';
 describe('identifies introspection queries', () => {
   it('request.query must be string', () => {
     expect(
-      isIntrospectionRequest({
-        query: null,
-      } as GraphQLRequest)
+      isIntrospectionRequest({} as GraphQLRequest)
     ).toBe(false);
   });
   test.each<[string, string, boolean]>([
